@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     }
 //cerrar sesion
     public void onClickFB(View view) {
-        LoginManager.getInstance().logOut();
+
         irAPrincipal();
 
     }
