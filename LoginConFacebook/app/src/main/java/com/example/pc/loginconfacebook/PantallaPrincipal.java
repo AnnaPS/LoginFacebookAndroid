@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.facebook.AccessToken;
+import com.facebook.login.LoginManager;
 
 import java.util.IllegalFormatCodePointException;
 
@@ -30,5 +31,8 @@ public class PantallaPrincipal extends AppCompatActivity {
     }
 
 
-
+    public void onClickCerrarSesion(View view) {
+        LoginManager.getInstance().logOut();
+        irALogin();
+    }
 }
