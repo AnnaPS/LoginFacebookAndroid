@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LoginConFacebook.iml" filepath="$PROJECT_DIR$/LoginConFacebook.iml" />
+      <module fileurl="file://C:\Users\Iván\Documents\proyects\LoginFacebookAndroid\LoginConFacebook\LoginConFacebook.iml" filepath="C:\Users\Iván\Documents\proyects\LoginFacebookAndroid\LoginConFacebook\LoginConFacebook.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Iván\Documents\proyects\LoginFacebookAndroid\LoginConFacebook\app\app.iml" filepath="C:\Users\Iván\Documents\proyects\LoginFacebookAndroid\LoginConFacebook\app\app.iml" />
     </modules>
   </component>
 </project>
