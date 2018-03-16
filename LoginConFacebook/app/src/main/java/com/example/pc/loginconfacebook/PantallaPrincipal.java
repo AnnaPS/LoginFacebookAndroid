@@ -16,6 +16,7 @@ import java.util.IllegalFormatCodePointException;
 
 public class PantallaPrincipal extends AppCompatActivity {
     EditText nombre, uid, email;
+    private boolean salir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +44,12 @@ public class PantallaPrincipal extends AppCompatActivity {
     }
 
     private void irALogin() {
-        Intent i = new Intent(this, MainActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(i);
+        if(!salir){
+            Intent i = new Intent(this, MainActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(i);
+        }
+
     }
 
 
@@ -56,4 +60,6 @@ public class PantallaPrincipal extends AppCompatActivity {
         LoginManager.getInstance().logOut();
         irALogin();
     }
+
+
 }

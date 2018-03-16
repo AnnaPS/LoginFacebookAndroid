@@ -133,4 +133,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClickFB(View view) {
         irAPrincipal();
     }
+
+    public void Salir(View view) {
+        finish();
+    }
 }
