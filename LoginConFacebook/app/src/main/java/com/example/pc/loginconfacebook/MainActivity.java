@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 
@@ -31,11 +32,13 @@ public class MainActivity extends AppCompatActivity {
     LoginButton loginFB;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener firebaseEscuchador;
+    private ProgressBar progreso;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loginFB = findViewById(R.id.login_button);
+        progreso = findViewById(R.id.progressBar);
 
         callbackManager = CallbackManager.Factory.create();
 
@@ -92,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void obtenerAccessToken(AccessToken accessToken) {
+
+        progreso.setVisibility(View.VISIBLE);
+        loginFB.setVisibility(View.GONE);
+
         AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
         //una vez se tiene la credencial que nos aporta el token podremos inicar sesion en firebase
         firebaseAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -99,7 +106,12 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 //este metodo se ejecuta cuando se termina tod el proceso
                 //pueden ocurrir errores, se muestra un mensaje al usuario
-                Toast.makeText(MainActivity.this, "Error de login", Toast.LENGTH_SHORT).show();
+                if (!task.isSuccessful()) {
+                    Toast.makeText(MainActivity.this, "Error de login", Toast.LENGTH_SHORT).show();
+                }
+                loginFB.setVisibility(View.VISIBLE);
+                progreso.setVisibility(View.GONE);
+
             }
         });
 
@@ -107,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void irAPrincipal() {
         Intent i = new Intent(this, PantallaPrincipal.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
     }
 
