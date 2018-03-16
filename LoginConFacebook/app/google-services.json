@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "736012090525",
-    "firebase_url": "https://loginconfacebook-19a4e.firebaseio.com",
-    "project_id": "loginconfacebook-19a4e",
-    "storage_bucket": "loginconfacebook-19a4e.appspot.com"
+    "project_number": "930588563198",
+    "firebase_url": "https://facebookfirebase-d8b1c.firebaseio.com",
+    "project_id": "facebookfirebase-d8b1c",
+    "storage_bucket": "facebookfirebase-d8b1c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:736012090525:android:5749c6b770341a0e",
+        "mobilesdk_app_id": "1:930588563198:android:5749c6b770341a0e",
         "android_client_info": {
           "package_name": "com.example.pc.loginconfacebook"
         }
       },
       "oauth_client": [
         {
-          "client_id": "736012090525-4405l9ql4fac9989fha3b9qvsb8k3dau.apps.googleusercontent.com",
+          "client_id": "930588563198-1tf3atle1itlhtj5pjt9fdqq3g7gnh1m.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.pc.loginconfacebook",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "736012090525-6nshbu3b5t2km0ktn78fieghkfob1dh2.apps.googleusercontent.com",
+          "client_id": "930588563198-am9tk2ldjs51366222c9bu81185edpbq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC09pkEM0b8ur_--NC-gaqlOsUmbaixnPc"
+          "current_key": "AIzaSyAUP09BkowyiGEzicUa7Sc0AkqXXh9iPSQ"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "736012090525-6nshbu3b5t2km0ktn78fieghkfob1dh2.apps.googleusercontent.com",
+              "client_id": "930588563198-am9tk2ldjs51366222c9bu81185edpbq.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
